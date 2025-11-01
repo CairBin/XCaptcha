@@ -21,13 +21,15 @@ class XCaptcha_Render
         <script>
             window.beforeCheckCallback = () => {
                 console.log("XCaptcha: 正在加载验证码样式...");
-                const checkLabel = document.getElementsByClassName('check-label');
-                if (checkLabel.length > 0) {
-                    precheckLabel = document.getElementsByClassName('precheck-label');
-                    for(var i=0; i<precheckLabel.length; i++){
-                        precheckLabel[i].style.display = 'none';
+                setTimeout(() => {
+                    const checkLabel = document.getElementsByClassName('check-label');
+                    if (checkLabel.length > 0) {
+                        precheckLabel = document.getElementsByClassName('precheck-label');
+                        for(var i=0; i<precheckLabel.length; i++){
+                            precheckLabel[i].style.display = 'none';
+                        }
                     }
-                }
+                }, 50);
                 console.log("XCaptcha: 验证码样式加载完毕!");
             }
             
