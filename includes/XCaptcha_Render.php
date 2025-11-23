@@ -159,12 +159,14 @@ EOF;
             } else {
                 console.log("Web Crypto API is not available or secure context is not present.");
             }
-            document.querySelector('#altcha').addEventListener('statechange', (ev) => {
-                //console.log('state:', ev.detail.state);
-                if (ev.detail.state === 'verified') {
-                    //console.log('payload:', ev.detail.payload);
-                    window.checkCallback && window.checkCallback();
-                }
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('#altcha').addEventListener('statechange', (ev) => {
+                    //console.log('state:', ev.detail.state);
+                    if (ev.detail.state === 'verified') {
+                        //console.log('payload:', ev.detail.payload);
+                        window.checkCallback && window.checkCallback();
+                    }
+                });
             });
             </script>
 EOF;
