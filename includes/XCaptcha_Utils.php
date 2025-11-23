@@ -71,7 +71,7 @@ class XCaptcha_Utils
             "cloudflare" => "<div class='cf-turnstile check-label' data-sitekey='{$captchaId}' data-theme='{$widgetColor}' data-size='{$widgetSize}' data-callback='checkCallback'></div>",
             "recaptcha" => "<div class='g-recaptcha check-label' data-sitekey='{$captchaId}' data-theme='{$widgetColor}' data-size='{$widgetSize}' data-callback='checkCallback'></div>",
             "geetest" => "<div id='gt-captcha' class='check-label'></div>",
-            "altcha" => '<altcha-widget id="altcha" class="check-label" challengeurl="/index.php/action/xcaptcha?do=ajaxResponseCaptchaData&type=altcha" hidefooter hidelogo strings=\'{"error": "验证失败，请稍后重试","expired": "验证码已过期","label": "请勾选进行验证","verified": "验证成功","verifying": "正在验证...","waitAlert": "请稍候，正在验证"}\'></altcha-widget>'];
+            "altcha" => '<altcha-widget id="altcha" class="check-label" style="--altcha-max-width:300px;" challengeurl="/index.php/action/xcaptcha?do=ajaxResponseCaptchaData&type=altcha" hidefooter hidelogo strings=\'{"error": "验证失败，请稍后重试","expired": "验证码已过期","label": "请勾选进行验证","verified": "验证成功","verifying": "正在验证...","waitAlert": "请稍候，正在验证"}\'></altcha-widget>'];
 
         return [$scriptTemplates[$captchaType] ?? '', $cdnUrl];
     }
