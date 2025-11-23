@@ -59,6 +59,10 @@ wget https://github.com/CairBin/XCaptcha/archive/refs/heads/main.zip
 <button type="submit" class="custom-submit-button submit"><?php _e('提交评论'); ?></button>
 ```
 
+### Altcha配置
+
+Altcha采用本地验证方案，自动生成HMAC密钥，无需手动填写`Captcha ID`和`Secret Key`
+
 
 部分主题可能不存在`comments.php`文件，这时候你需要从其他文件里找到评论表单，并在合适的位置添加这行代码。
 
@@ -90,6 +94,9 @@ wget https://github.com/CairBin/XCaptcha/archive/refs/heads/main.zip
 
 于v1.3.0正式版兼容PHP8，并在PHP82环境下通过测试。详细请参看“重要版本说明”部分和[CHANGELOG.md](./CHANGELOG.md)。
 
+## PHP72兼容性问题
+
+于v1.3.1版本优化了Altcha PHP72的兼容性，PHP72没有`JSON_ERROR_NONE`(PHP73引入)，会导致`./lib/class.altcha.php`报错
 
 ## 重要版本说明
 
@@ -109,7 +116,9 @@ wget https://github.com/CairBin/XCaptcha/archive/refs/heads/main.zip
 
 * v1.3.0本分为预发布测试版和正式版，预发布版本存在altcha评论错误以及PHP8下极验证无法渲染问题，在v1.3.0正式版已经修复，Release页面的预发布版本已经删除，现在可下载的都是正式版本，建议及时更新。
 
+### 关于v1.3.1及其后续版本
 
+* 自v1.3.1版本，优化了Altcha PHP72的兼容性
 
 
 ## 反馈

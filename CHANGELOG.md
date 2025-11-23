@@ -1,3 +1,12 @@
+## [1.3.1] - 2025-11-23
+
+### Fixed
+
+* 修复Altcha PHP72的兼容性问题，PHP72没有`JSON_ERROR_NONE`(PHP73引入)，会导致`./lib/class.altcha.php`报错
+* 修复登陆界面验证码占位符不消失以及按钮无法启用的bug(issue #8)
+* 修复评论区验证码占位符不消失的bug
+* 优化Altcha样式
+
 ## [1.3.0] - 2025-10-10
 
 ### Fixed
