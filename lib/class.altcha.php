@@ -151,7 +151,7 @@ class Altcha
         //     return null;
         // }
 
-        // PHP72不兼容JSON_THROW_ON_ERROR 这是PHP73引入的，下面是兼容写法
+        // PHP72不兼容JSON_THROW_ON_ERROR 这是PHP73引入的，下面是兼容写法 
         $data = json_decode($decoded, true, 2);
         if ($data === null && json_last_error() !== JSON_ERROR_NONE) {
             return null;
