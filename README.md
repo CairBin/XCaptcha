@@ -96,7 +96,7 @@ Altcha采用本地验证方案，自动生成HMAC密钥，无需手动填写`Cap
 
 ## PHP72兼容性问题
 
-于v1.3.1版本优化了Altcha PHP72的兼容性，PHP72没有`JSON_ERROR_NONE`(PHP73引入)，会导致`./lib/class.altcha.php`报错
+于v1.3.1版本优化了Altcha PHP72的兼容性，PHP72没有`JSON_THROW_ON_ERROR`(PHP73引入)，会导致`./lib/class.altcha.php`报错
 
 ## 重要版本说明
 
